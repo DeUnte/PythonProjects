@@ -1,0 +1,12 @@
+# ~ KNeighborsClassifier ~ #
+
+from sklearn.neighbors import KNeighborsClassifier # Have to change the import to the correct model
+
+X = [[157,68,36], [175,74,38], [183,93,46], [165,57,37], [163,84,36], [193,89,47], [170,91,43]]
+Y = ['female', 'female', 'male', 'female', 'female', 'male', 'male']
+clf = KNeighborsClassifier()
+clf = clf.fit(X,Y)
+
+prediction = clf.predict([[190,70,43]])
+
+print(prediction)
